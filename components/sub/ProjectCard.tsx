@@ -5,11 +5,19 @@ interface Props {
   src: string;
   title: string;
   description: string;
+  style: any | undefined;
+  url: string | undefined;
 }
 
-const ProjectCard = ({ src, title, description }: Props) => {
+const ProjectCard = ({ src, title, description, style, url }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+    <div
+      className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] cursor-pointer"
+      style={style}
+      onClick={() => {
+        if (url) window.open(url);
+      }}
+    >
       <Image
         src={src}
         alt={title}

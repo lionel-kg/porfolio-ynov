@@ -1,0 +1,28 @@
+@import "../helpers/variables.scss";
+
+body,
+html,
+#__next {
+  height: 100%;
+  background-color: $primary-bg;
+  color: white;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow: hidden;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+p {
+  margin: 0;
+  text-align: justify;
+}
