@@ -7,7 +7,7 @@ export const Socials = [
 
   {
     name: "Linkedin",
-    src: "/linkedin.svg",
+    src: "linkedin.svg",
     link: "https://www.linkedin.com/in/lionel-komguem/",
     width: 60,
     height: 60,
