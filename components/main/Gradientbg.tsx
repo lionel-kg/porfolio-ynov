@@ -1,6 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const GradientBg = ({ children }) => {
+interface GradientBgProps {
+  children: ReactNode;
+}
+
+const GradientBg: React.FC<GradientBgProps> = ({ children }) => {
   return <div className="gradient-bg">{children}</div>;
 };
 
