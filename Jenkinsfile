@@ -68,9 +68,9 @@ pipeline {
     //       }
     //   }    
           stage('deploy it') {
-    when {
-        expression { GIT_BRANCH == 'origin/main' }
-    }
+    // when {
+    //     expression { GIT_BRANCH == 'origin/main' }
+    // }
     // agent any
     // environment {
     //     HEROKU_API_KEY = credentials('heroku_api_key')
