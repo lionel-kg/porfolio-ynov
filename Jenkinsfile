@@ -67,6 +67,11 @@ pipeline {
     //          }
     //       }
     //   }    
+    stage('Checkout') {
+    steps {
+        git branch: 'main', credentialsId: 'your-git-credentials', url: 'https://github.com/lionel-kg/porfolio-ynov'
+    }
+}
           stage('deploy it') {
     // when {
     //     expression { GIT_BRANCH == 'origin/main' }
