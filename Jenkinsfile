@@ -78,7 +78,10 @@ pipeline {
     steps {
         script {
             sh '''
-               cd /var/www/porfolio-ynov
+                ls -ld /var/www/porfolio-ynov
+                sudo chown -R $(whoami):$(whoami) /var/www/porfolio-ynov
+                git config --global --add safe.directory /var/www/porfolio-ynov
+                cd /var/www/porfolio-ynov
                 git pull
                 npm install
                 npm run prod
