@@ -68,6 +68,7 @@ pipeline {
     //       }
     //   }    
     stage('Checkout') {
+    agent any
     steps {
         git branch: 'main', credentialsId: 'your-git-credentials', url: 'https://github.com/lionel-kg/porfolio-ynov'
     }
