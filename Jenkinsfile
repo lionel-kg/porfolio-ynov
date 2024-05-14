@@ -84,8 +84,9 @@ pipeline {
     steps {
         script {
             sh '''
-                 git config --global --add safe.directory /var/www/porfolio-ynov
+                pwd
                 cd /var/www/porfolio-ynov
+                pwd
                 git pull
                 npm install
                 npm run prod
