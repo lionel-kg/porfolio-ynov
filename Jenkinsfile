@@ -93,6 +93,9 @@ pipeline {
                 cd /var/www/porfolio-ynov
                 pwd
                 git pull
+                nvm -v
+                node -v
+                npm -v
                 npm install
                 npm run prod
             '''
