@@ -8,12 +8,7 @@ pipeline {
        STAGING = "${ID_DOCKER}-flask-staging"
        PRODUCTION = "${ID_DOCKER}-production"
      }
-     agent {
-        docker {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
+     agent none
      stages {
     //      stage('Build image') {
     //          agent any
