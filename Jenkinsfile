@@ -20,6 +20,7 @@ pipeline {
             sh '''
                 cd /var/www/porfolio-ynov
                 pwd
+                echo $PATH
                 git pull
                 npm install
                 npm run prod
