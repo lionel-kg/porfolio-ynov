@@ -9,7 +9,8 @@ pipeline {
        PRODUCTION = "${ID_DOCKER}-production"
      }
      agent none
-     stages {
+     stages {    
+        agent any
           stage('Install Node.js') {
             steps {
                 sh 'curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -'
