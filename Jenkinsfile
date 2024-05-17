@@ -4,14 +4,6 @@ pipeline {
         nodejs 'npm'
     }
      stages {    
-          stage('Install Node.js') {
-        agent any
-            steps {
-                sh 'curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -'
-                sh 'sudo apt-get install -y nodejs'
-            }
-        }
-
     stage('deploy it') {
     agent any
     steps {
