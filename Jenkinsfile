@@ -1,15 +1,8 @@
 pipeline {
-    
-     environment {
-       ID_DOCKER = "${ID_DOCKER_PARAMS}"
-       IMAGE_NAME = "jk-flask-auth-app"
-       IMAGE_TAG = "latest"
-       PORT_EXPOSED = "${PORT_PARAMS}" 
-       STAGING = "${ID_DOCKER}-flask-staging"
-       PRODUCTION = "${ID_DOCKER}-production"
-     }
-     agent none
-
+    agent none
+    tools {
+        nodejs 'npm'
+    }
      stages {    
           stage('Install Node.js') {
         agent any
@@ -20,9 +13,7 @@ pipeline {
         }
 
     stage('deploy it') {
-
     agent any
-
     steps {
         script {
             sh '''
